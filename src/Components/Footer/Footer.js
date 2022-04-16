@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './Footer.css';
 const Footer = () => {
   return (
-    <footer className=" min-h-[400px] bg-[#222426]">
+    <footer className=" min-h-[400px] bg-[#222426] fixed bottom-0">
       <div className="footer-container pt-10 grid w-[80%] mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-3 text-[#22C55E] place-items-center  place-content-center gap-y-8">
         <div>
           <h4 className="text-2xl font-serif">ABOUT US</h4>
@@ -29,10 +29,13 @@ const Footer = () => {
           </a>
         </div>
         <div>
-                  <h4 className="text-2xl font-serif">PAGES</h4>
-                  <div>
-                      <Link></Link>
-                  </div>
+          <h4 className="text-2xl font-serif">PAGES</h4>
+          <div className="footer-link">
+            <Link to="/home">Home</Link>
+            <Link to="/checkout">CheckOut</Link>
+            <Link to="/blogs">Blogs</Link>
+            <Link to="/aboutme">About me</Link>
+          </div>
         </div>
       </div>
     </footer>
