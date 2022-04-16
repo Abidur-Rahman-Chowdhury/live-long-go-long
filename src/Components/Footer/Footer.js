@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './Footer.css';
 const Footer = () => {
   return (
-    <footer className=" min-h-[400px] bg-[#222426] fixed bottom-0">
+    <footer className=" footer bg-[#222426] pb-5 mt-10">
       <div className="footer-container pt-10 grid w-[80%] mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-3 text-[#22C55E] place-items-center  place-content-center gap-y-8">
         <div>
           <h4 className="text-2xl font-serif">ABOUT US</h4>

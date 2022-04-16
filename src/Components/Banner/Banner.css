@@ -1,0 +1,33 @@
+.banner-container {
+  background-color: #9bbf75;
+  padding-bottom: 30px;
+
+  padding-top: 20px;
+}
+.banner-image {
+  max-width: 500px;
+}
+.banner-image img {
+  width: 100%;
+}
+.banner-container p {
+  font-style: italic;
+  font-weight: bold;
+}
+.banner-btn {
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  padding: 20px;
+  text-shadow: 0px -1px 0px rgba(30, 30, 30, 0.8);
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  background: #22c55ea8;
+  
+  -webkit-box-shadow: 0px 7px 16px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow: 0px 7px 16px rgba(50, 50, 50, 0.75);
+  box-shadow: 0px 7px 16px rgba(50, 50, 50, 0.75);
+  margin-top: 15px;
+  font-weight: bold;
+  border: none;
+}
