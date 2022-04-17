@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './Login.css';
 import login from '../../image/signup-signout/signin-image.jpg';
 import {
@@ -18,6 +18,12 @@ const Login = () => {
     useSignInWithEmailAndPassword(auth);
   const [sendPasswordResetEmail, sending, error2] =
     useSendPasswordResetEmail(auth);
+    const navigate = useNavigate();
+    const location = useLocation();
+  let from = location.state?.from?.pathname || '/';
+  if (user) {
+    navigate(from, { replace: true });
+  }
   let errorElement;
   if (error) {
     errorElement = <p className='text-red-700'>{ error.message}</p>
