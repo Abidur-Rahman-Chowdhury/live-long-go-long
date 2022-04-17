@@ -4,7 +4,7 @@ import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 
 import signup from '../../image/signup-signout/signup-image.jpg';
 import auth from '../../firebase.init';
-import { Link } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Social from '../Social/Social';
@@ -26,6 +26,10 @@ const SignUp = () => {
 
    
   };
+  const navigate = useNavigate();
+  if (user) {
+    navigate('/home');
+  }
   return (
     <section className="flex justify-center items-center mt-10  ">
       <div className="signup-container flex flex-col justify-center items-center md:flex-row rounded-lg">

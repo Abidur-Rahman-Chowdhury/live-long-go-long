@@ -40,9 +40,7 @@ const Login = () => {
    
   };
   
-  if (user) {
-    console.log(user);
-  }
+ 
   const handelLogin = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
