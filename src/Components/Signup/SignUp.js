@@ -7,6 +7,7 @@ import auth from '../../firebase.init';
 import { Link } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Social from '../Social/Social';
 
 const SignUp = () => {
   const [createUserWithEmailAndPassword, user, loading, error] =
@@ -124,12 +125,14 @@ const SignUp = () => {
              
             </p>
           </form>
+          <Social></Social>
         </div>
         <div className="right-side mt-5">
           <img className="mx-auto" src={signup} alt="" />
         </div>
-          </div>
-         <ToastContainer></ToastContainer>
+      </div>
+      
+        <ToastContainer></ToastContainer>
     </section>
   );
 };

@@ -9,6 +9,7 @@ import {
 import auth from '../../firebase.init';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Social from '../Social/Social';
 
 const Login = () => {
   const emailRef = useRef('');
@@ -126,7 +127,7 @@ const Login = () => {
               <input type="submit" value="Login" className="submit-btn" />
             </p>
           </form>
-          
+          <Social></Social>
         </div>
       </div>
       <ToastContainer></ToastContainer>
