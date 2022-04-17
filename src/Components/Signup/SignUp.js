@@ -1,15 +1,28 @@
 import React from 'react';
 import './SignUp.css';
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 
 import signup from '../../image/signup-signout/signup-image.jpg';
+import auth from '../../firebase.init';
+import { Link } from 'react-router-dom';
 
 const SignUp = () => {
+  const [createUserWithEmailAndPassword, user, loading, error] =
+    useCreateUserWithEmailAndPassword(auth,{sendEmailVerification:true});
+
+  const handelOnSubmit = (e) => {
+    e.preventDefault();
+    const name = e.target.name.value;
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    createUserWithEmailAndPassword(email, password);
+  };
   return (
-    <section className="flex justify-center items-center mt-10 ">
-      <div className="signup-container grid grid-cols-1 md:grid-cols-2 gap-x-4 p-12 rounded-lg border-gray-400">
-        <div className="left-side">
-          <h3 className="text-3xl font-bold text-center">Sign up</h3>
-          <form className="px-14">
+    <section className="flex justify-center items-center mt-10  ">
+      <div className="signup-container flex flex-col justify-center items-center md:flex-row rounded-lg">
+        <div className="left-side mt-6">
+          <h3 className="text-3xl font-bold text-center mb-6">Sign up</h3>
+          <form onSubmit={handelOnSubmit} className="px-14">
             <p className="user-name ">
               <label htmlFor="name" className="text-xl font-bold px-2">
                 Name
@@ -30,7 +43,12 @@ const SignUp = () => {
                 />
               </svg>
 
-              <input type="text" name="name" placeholder="Enter your name" required />
+              <input
+                type="text"
+                name="name"
+                placeholder="Enter your name"
+                required
+              />
             </p>
             <p className="user-name mt-5 ">
               <label htmlFor="email" className="text-xl font-bold px-2">
@@ -86,11 +104,14 @@ const SignUp = () => {
                 required
               />
             </p>
-            <p className='mt-5'><input type="submit" value="Submit" className='submit-btn' /></p>
+            <p className='mt-5'>Already have an account ? <Link to='/login' className='text-sky-500 text-xl'>Login</Link></p>
+            <p className="mt-5">
+              <input type="submit" value="Submit" className="submit-btn" />
+            </p>
           </form>
         </div>
-              <div className="right-side ">
-                  <img src={signup} alt="" />
+        <div className="right-side mt-5">
+          <img className="mx-auto" src={signup} alt="" />
         </div>
       </div>
     </section>

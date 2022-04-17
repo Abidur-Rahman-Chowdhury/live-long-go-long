@@ -1,9 +1,16 @@
 
 .signup-container{
-    width: 50%;
+    width: 80%;
     margin: 0 auto;
     border: 1px solid gray;
     padding-bottom: 20px;
+    margin-bottom: 100px;
+}
+.left-side{
+    flex-grow:1 ;
+}
+.right-side{
+    flex-grow: 1;
 }
 .signup-container input:not([type=submit]) {
     padding-left: 50px;
@@ -15,9 +22,12 @@
     outline: none;
     font-size: 18px;
     margin-top: 8px;
+    padding-bottom: 10px;
+    
 }
 .user-name{
     position: relative;
+    /* z-index: -2; */
 }
 .user-icon{
     position: absolute;
