@@ -22,11 +22,11 @@ const Footer = () => {
             Tel: <small> +7 998 71 150 30 20</small> <br />
             Fax: <small>+7 998 71 150 30 20</small>
           </p>
-          <a to="https://mail.google.com/mail/u/1/#inbox" as={Link}>
+          <Link to="https://mail.google.com/mail/u/1/#inbox" as={Link}>
             <small className="text-[gray] underline underline-offset-1">
               abid43iiuc@gmail.com
             </small>
-          </a>
+          </Link>
         </div>
         <div>
           <h4 className="text-2xl font-serif">PAGES</h4>
