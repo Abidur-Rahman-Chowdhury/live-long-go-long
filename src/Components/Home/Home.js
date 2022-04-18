@@ -1,6 +1,7 @@
 import React from 'react';
 import Banner from '../Banner/Banner';
 import HealthCoach from '../HealthCoach/HealthCoach';
+import Services from '../Services/Services';
 import './Home.css';
 
 
@@ -9,6 +10,7 @@ const Home = () => {
         <div>
             <Banner></Banner>
             <HealthCoach></HealthCoach>
+            <Services></Services>
         </div>
     );
 };

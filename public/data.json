@@ -1,0 +1,24 @@
+[
+    {
+        "id":1,
+        "name" : "Personalized Nutrition Plan",
+        "img":"https://i.ibb.co/tbGCSzr/1-min-795x544.jpg",
+        "price" : 20,
+        "des" : "Sometimes to change diet habits is sufficient for changing the whole lifestyle. Food for body can heal the whole personality by causing a behavioral change" 
+
+    },
+    {
+        "id":2,
+        "name" : "Personalized Exercise Program",
+        "img":"https://i.ibb.co/LPr6bH5/2-min-795x544.jpg",
+        "price" : 35,
+        "des" : "Life is motion and you can feel your every muscle when you are working out. Of course you have to know which exercises are useful for which groups of muscles. And that’s it."
+    },
+    {
+        "id":3,
+        "name" : "Individual Routine Program",
+        "img":"https://i.ibb.co/PM8KWr1/3-min-795x544.jpg",
+        "price" : 45,
+        "des" : "The best solution of course is combining diet improvements together with workout plan and regular gym visits. It should take into account your individual particularities."
+    }
+]
