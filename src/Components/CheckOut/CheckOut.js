@@ -20,7 +20,7 @@ const CheckOut = () => {
                     <p className='mb-4'><label htmlFor="package" className='text-xl font-serif font-bold'>Package</label> <br />
                         <input type="text" name='package' placeholder='Please Write The Service You Want To Take'  className='border text-black   mt-4 pl-5 w-1/2 h-10 rounded-lg' />
                     </p>
-                    <button className='bg-green-900 px-8 py-2 ml-9 rounded-xl font-bold cursor-pointer mt-5'>Submit</button>
+                    <button className='bg-green-900 px-8 py-2 ml-9 rounded-xl font-bold cursor-pointer mt-5'>Book Now</button>
                 </form>
             </div>
         </div>

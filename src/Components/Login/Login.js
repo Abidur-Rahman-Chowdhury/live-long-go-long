@@ -14,13 +14,18 @@ import Social from '../Social/Social';
 const Login = () => {
   const emailRef = useRef('');
   const passwordRef = useRef('')
+  // auth set for signIn with email and pass
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
+  
+  // auth set for pass reset email
   const [sendPasswordResetEmail, sending, error2] =
     useSendPasswordResetEmail(auth);
     const navigate = useNavigate();
     const location = useLocation();
   let from = location.state?.from?.pathname || '/';
+
+  // if user is available
   if (user) {
     navigate(from, { replace: true });
   }
@@ -28,6 +33,9 @@ const Login = () => {
   if (error) {
     errorElement = <p className='text-red-700'>{ error.message}</p>
   }
+  
+  // reset password
+
   const resetPassword = async () => {
     const email = emailRef.current.value;
     if (email) {
@@ -40,7 +48,7 @@ const Login = () => {
    
   };
   
- 
+//  sigin in with email and passwprd
   const handelLogin = (e) => {
     e.preventDefault();
     const email = e.target.email.value;

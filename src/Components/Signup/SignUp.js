@@ -117,7 +117,7 @@ const SignUp = () => {
                 required
               />
             </p>
-            <p>{errorElement}</p>
+            <p className='text-red-700'>{errorElement}</p>
             <p className="mt-5">
               Already have an account ?
               <Link to="/login" className="text-sky-500 text-xl px-2">
