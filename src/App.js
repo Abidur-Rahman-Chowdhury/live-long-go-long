@@ -10,6 +10,7 @@ import NotFound from './Components/NotFound/NotFound';
 import Login from './Components/Login/Login';
 import RequiredAuth from './Components/RequiredAuth/RequiredAuth';
 import CheckOut from './Components/CheckOut/CheckOut';
+import AboutMe from './Components/AboutMe/AboutMe';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>
+        <Route path='/aboutme' element={<AboutMe></AboutMe>}></Route>
         <Route path='/checkout' element={
           <RequiredAuth>
             <CheckOut></CheckOut>
